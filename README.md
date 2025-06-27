@@ -10,7 +10,7 @@
 <a href="https://github.com/razifcode/wabot/issues"><img title="Issues" src="https://img.shields.io/github/issues/razifcode/wabot?label=Issues&color=success&style=flat-square"></a>
 <a href="https://github.com/razifcode/wabot/issues?q=is%3Aissue+is%3Aclosed"><img title="Closed Issues" src="https://img.shields.io/github/issues-closed/razifcode/wabot?label=Closed&color=red&style=flat-square"></a>
 
----
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#table-of-contents)
 
 ## 📌 Pengenalan
 
