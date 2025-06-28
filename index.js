@@ -39,5 +39,7 @@ async function startBot() {
       console.log("connect bot: +" + conn.user.id)
     }
   })
+
+  conn.ev.on("messages.upsert", ({ messages }) => require("./messages.js")(conn, messages[0]))
 }
 startBot()
