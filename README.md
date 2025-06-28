@@ -103,5 +103,6 @@ Sesi akan disimpan ke folder `session` selepas login pertama. Ini membolehkan an
 Sekiranya anda menghadapi masalah, anda boleh:
 - Buka isu (issue) di GitHub
 - Sertai Group WhatsApp: [Group WhatsApp](https://chat.whatsapp.com/LVuLZ7DO3Mf81rXnGCnvEF?mode=r_t)
+```New Group```
 
 
