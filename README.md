@@ -65,7 +65,7 @@ node index.js
 2. **Arahan dalam Termux**:
 ```bash
 pkg update -y && upgrade -y
-pkg install nodejs git -y
+pkg install nodejs git ffmpeg imagemagick -y
 git clone https://github.com/razifcode/wabot
 cd wabot
 npm install
