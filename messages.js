@@ -1,12 +1,11 @@
 const prefix = "!"
 const fs = require("fs")
 
-
 module.exports = async (conn, messages) => {
   const m = messages
   if (!m.message) return
   const jid = m.key.remoteJid
-  const text = m.message.extendedTextMessage?.text
+  const text = m.message.extendedTextMessage?.text || m.message.conversation || m.message.imageMessage?.caption || m.message.videoMessage?.caption || ""
   console.log(m)
   const command = text?.slice(prefix.length).trim().split(' ').shift()?.toLowerCase()
   const reply = text => {
@@ -18,6 +17,45 @@ module.exports = async (conn, messages) => {
     case 'text':
       await reply("hai, ini adalah text")
       break;
+      
+    case 'tag':
+      await conn.sendMessage(jid, {
+        mentions: [m.key.participant]
+        text: `hai @${m.key.participant.split("@")[0]}`,
+      }, { quoted: m })
+      break;
+    
+    case 'poll':
+      await conn.sendMessage(jid, {
+        poll: {
+          name: "my poll",
+          values: ["test1", "test2"],
+          selectableCount: 1,
+          toAnnouncementGroup: false
+        }
+      }, { quoted: m })
+      break;
+    
+    case 'link':
+      await reply("https://github.com/RazifCode/wabot")
+      break;
+    
+    case 'gif':
+      await conn.sendMessage(jid, {
+        video: fs.readFileSync("./media/video.mp4" ), 
+        caption: "ini adalah gif",
+        gifPlayback: true
+      }, { quoted: m })
+      break;
+      
+    case 'viewone':
+      await conn.sendMessage(jid, {
+        image: fs.readFileSync("./media/image.jpg"), // boleh audio, & video
+        caption: "ini adalah viewones",
+        viewOnce: true
+      }, { quoted: m })
+      break;
+    
       
     case 'image':
       await conn.sendMessage(jid, {
@@ -126,4 +164,4 @@ END:VCARD`
     */ // button tidk support dengan baileys original
     
   }
-}
+  }
