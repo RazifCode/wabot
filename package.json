@@ -12,14 +12,11 @@
   "type": "commonjs",
   "dependencies": {
     "@whiskeysockets/baileys": "*",
-<<<<<<< HEAD
     "link-preview-js": "^3.1.0",
-=======
     "chalk": "^3.0.0",
     "inquirer": "^8.2.7",
     "link-preview-js": "^3.1.0",
     "lowdb": "^2.1.0",
->>>>>>> 627ea3a (update script bot)
     "qrcode-terminal": "^0.12.0"
   }
 }
