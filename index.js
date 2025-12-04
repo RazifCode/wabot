@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const {
   default: makeWaSocket,
   useMultiFileAuthState
